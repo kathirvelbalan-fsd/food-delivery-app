@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodExpress - Restaurant Page</title>
+  <link rel="stylesheet" href="restaurantStyles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">FoodExpress</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="login.html">Login</a>
+      <a href="reg.html">Sign Up</a>
+      <a href="cart.jsp">🛒 Cart</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Restaurant discovery</p>
+        <h1>Find tasty food near you</h1>
+        <p>Browse popular restaurants with ratings, location, delivery time, cuisine, and offers.</p>
+        <form class="search-box">
+          <input type="search" placeholder="Search for biryani, pizza, dosa..." aria-label="Search restaurants">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Restaurant filters">
+      <button>Fast Delivery</button>
+      <button>Top Rated</button>
+      <button>Pure Veg</button>
+      <button>Offers</button>
+      <button>Near Me</button>
+    </section>
+
+    <section class="restaurant-section">
+      <div class="section-heading">
+        <h2>Popular Restaurants</h2>
+        <p>20 restaurants available in your city</p>
+      </div>
+
+      <div class="restaurant-grid">
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Pizza from Pizza Palace">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Pizza Palace</h3>
+              <span class="rating">4.5</span>
+            </div>
+            <p class="cuisine">Pizza, Italian, Fast Food</p>
+            <p class="meta">MG Road, Bengaluru</p>
+            <div class="card-footer">
+              <span>30-35 min</span>
+              <strong>50% OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=900&q=80" alt="Biryani bowl from Biryani House">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Biryani House</h3>
+              <span class="rating">4.7</span>
+            </div>
+            <p class="cuisine">Biryani, Mughlai, Kebabs</p>
+            <p class="meta">Indiranagar, Bengaluru</p>
+            <div class="card-footer">
+              <span>25-30 min</span>
+              <strong>Free Delivery</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Burger from Burger Street">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Burger Street</h3>
+              <span class="rating">4.3</span>
+            </div>
+            <p class="cuisine">Burgers, Fries, Beverages</p>
+            <p class="meta">Koramangala, Bengaluru</p>
+            <div class="card-footer">
+              <span>20-25 min</span>
+              <strong>20% OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80" alt="Noodles from Wok Express">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Wok Express</h3>
+               <span class="rating">4.4</span>
+            </div>
+            <p class="cuisine">Chinese, Thai, Noodles</p>
+            <p class="meta">HSR Layout, Bengaluru</p>
+            <div class="card-footer">
+              <span>35-40 min</span>
+              <strong>Buy 1 Get 1</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80" alt="South Indian meal from Dosa Corner">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Dosa Corner</h3>
+              <span class="rating">4.6</span>
+            </div>
+            <p class="cuisine">South Indian, Breakfast</p>
+            <p class="meta">Jayanagar, Bengaluru</p>
+            <div class="card-footer">
+              <span>15-20 min</span>
+              <strong>Pure Veg</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1628294896516-344152572ee8?auto=format&fit=crop&w=900&q=80" alt="Pasta from Pasta Point">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Pasta Point</h3>
+              <span class="rating">4.2</span>
+            </div>
+            <p class="cuisine">Italian, Pasta, Desserts</p>
+            <p class="meta">Whitefield, Bengaluru</p>
+            <div class="card-footer">
+              <span>40-45 min</span>
+              <strong>30% OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Samosas from Chat Bazaar">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Chat Bazaar</h3>
+              <span class="rating">4.1</span>
+            </div>
+            <p class="cuisine">Street Food, Snacks, Chaat</p>
+            <p class="meta">Basavanagudi, Bengaluru</p>
+            <div class="card-footer">
+              <span>20-30 min</span>
+              <strong>₹100 OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&q=80" alt="Pasta meal from The Spice Table">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>The Spice Table</h3>
+              <span class="rating">4.8</span>
+            </div>
+            <p class="cuisine">North Indian, Curry, Thali</p>
+            <p class="meta">Malleshwaram, Bengaluru</p>
+            <div class="card-footer">
+              <span>30-40 min</span>
+              <strong>Top Rated</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=900&q=80" alt="Cheese pizza from Oven Fresh">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Oven Fresh</h3>
+              <span class="rating">4.0</span>
+            </div>
+            <p class="cuisine">Bakery, Pizza, Sandwiches</p>
+            <p class="meta">Marathahalli, Bengaluru</p>
+            <div class="card-footer">
+              <span>25-35 min</span>
+              <strong>Combo Deal</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80" alt="Burger and fries from Grill Hub">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Grill Hub</h3>
+              <span class="rating">4.5</span>
+            </div>
+            <p class="cuisine">Grill, Burgers, Wraps</p>
+            <p class="meta">Electronic City, Bengaluru</p>
+            <div class="card-footer">
+              <span>35-45 min</span>
+              <strong>₹75 OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=80" alt="Sushi platter from Sushi World">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Sushi World</h3>
+              <span class="rating">4.6</span>
+            </div>
+            <p class="cuisine">Japanese, Sushi, Asian</p>
+            <p class="meta">Lavelle Road, Bengaluru</p>
+            <div class="card-footer">
+              <span>45-50 min</span>
+              <strong>Premium</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Tacos from Taco Town">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Taco Town</h3>
+              <span class="rating">4.2</span>
+            </div>
+            <p class="cuisine">Mexican, Tacos, Nachos</p>
+            <p class="meta">Brigade Road, Bengaluru</p>
+            <div class="card-footer">
+              <span>30-35 min</span>
+              <strong>New</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80" alt="Breakfast plate from Cafe Morning">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Cafe Morning</h3>
+              <span class="rating">4.4</span>
+            </div>
+            <p class="cuisine">Cafe, Coffee, Breakfast</p>
+            <p class="meta">Cunningham Road, Bengaluru</p>
+            <div class="card-footer">
+              <span>15-25 min</span>
+              
+              <strong>Fresh Picks</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?auto=format&fit=crop&w=900&q=80" alt="Ice cream from Scoop Station">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Scoop Station</h3>
+              <span class="rating">4.7</span>
+            </div>
+            <p class="cuisine">Ice Cream, Desserts, Shakes</p>
+            <p class="meta">Rajajinagar, Bengaluru</p>
+            <div class="card-footer">
+              <span>20-25 min</span>
+              <strong>Sweet Deal</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=80" alt="Indian thali from Thali Express">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Thali Express</h3>
+              <span class="rating">4.3</span>
+            </div>
+            <p class="cuisine">Indian, Thali, Meals</p>
+            <p class="meta">BTM Layout, Bengaluru</p>
+            <div class="card-footer">
+              <span>25-30 min</span>
+              <strong>Meals Under ₹199</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Healthy salad from Green Bowl">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Green Bowl</h3>
+              <span class="rating">4.5</span>
+            </div>
+            <p class="cuisine">Healthy Food, Salads, Bowls</p>
+            <p class="meta">Domlur, Bengaluru</p>
+            <div class="card-footer">
+              <span>20-30 min</span>
+              <strong>Healthy</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80" alt="Shawarma from Shawarma King">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Shawarma King</h3>
+              <span class="rating">4.1</span>
+            </div>
+            <p class="cuisine">Arabian, Shawarma, Rolls</p>
+            <p class="meta">Frazer Town, Bengaluru</p>
+            <div class="card-footer">
+              <span>25-35 min</span>
+              <strong>₹50 OFF</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80" alt="Paneer curry from Curry Leaf">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Curry Leaf</h3>
+              <span class="rating">4.6</span>
+            </div>
+            <p class="cuisine">Indian, Paneer, Curries</p>
+            <p class="meta">Yelahanka, Bengaluru</p>
+            <div class="card-footer">
+              <span>35-40 min</span>
+              <strong>Family Pack</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=900&q=80" alt="Sandwich from Sandwich Square">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Sandwich Square</h3>
+              <span class="rating">4.0</span>
+            </div>
+            <p class="cuisine">Sandwiches, Juice, Snacks</p>
+            <p class="meta">Hebbal, Bengaluru</p>
+            <div class="card-footer">
+              <span>15-20 min</span>
+              <strong>Quick Bite</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="restaurant-card">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80" alt="Cake dessert from Dessert Studio">
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Dessert Studio</h3>
+              <span class="rating">4.8</span>
+            </div>
+            <p class="cuisine">Cakes, Pastries, Desserts</p>
+            <p class="meta">JP Nagar, Bengaluru</p>
+            <div class="card-footer">
+              <span>25-30 min</span>
+              <strong>Best Seller</strong>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+              
+              
+              

@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* --- Video Canvas Layer Rendering --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* --- Translucent Glass Profile Workspace Window --- */
+.register-container {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 45px 40px;
+    border-radius: 28px;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    transition: all 0.4s ease;
+    box-sizing: border-box;
+}
+
+.register-container:hover {
+    border-color: rgba(255, 71, 87, 0.5);
+    box-shadow: 0 30px 60px rgba(255, 71, 87, 0.25);
+    transform: translateY(-4px);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #ffffff 30%, #ff4757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 5px 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* --- Interactive Input Elements Positioning Panels --- */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.register-container input,
+.register-container select,
+.register-container textarea {
+    width: 100%;
+    padding: 15px 45px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.register-container input::placeholder,
+.register-container textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.register-container input:focus,
+.register-container select:focus,
+.register-container textarea:focus {
+    border-color: #ff4757;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
+}
+
+/* --- Eye Password Visibility Toggle Modifier --- */
+.eye-btn {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    padding: 0;
+    z-index: 2;
+}
+
+.eye-btn:hover {
+    color: #ff4757;
+}
+
+/* --- Custom Custom Arrow Style for Select Dropdowns --- */
+.select-wrapper select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    right: 18px;
+    pointer-events: none;
+}
+
+.register-container select option {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* --- Multi-line Text Area Alignment Adjustments --- */
+.textarea-wrapper {
+    align-items: flex-start;
+}
+
+.textarea-icon {
+    top: 15px;
+}
+
+.register-container textarea {
+    min-height: 90px;
+    resize: none;
+    line-height: 1.5;
+}
+
+/* --- Action Submit System Trigger Configuration --- */
+.cart-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.cart-btn:hover {
+    background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.6);
+    transform: translateY(-2px);
+}
+
+/* --- Split Section Divider Component --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 22px 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+/* --- Auxiliary OAuth Component Row Layout --- */
+.google-btn {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Navigation Swap Card Link Blocks --- */
+.signup-box {
+    margin-top: 25px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.07) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 15px;
+    border-radius: 16px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-link {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.gradient-link {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 3px;
+}
+
+.gradient-link:hover {
+    filter: brightness(1.3);
+    text-decoration: underline;
+}
+
+/* --- Media Target Responsive Scales --- */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .register-container {
+        padding: 35px 20px;
+    }
+}
