@@ -62,3 +62,16 @@ MySQL
 
 5\. Run the project on the Tomcat server.
 
+## 📸 Project Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Restaurant Page
+![Restaurant](screenshots/restaurant.png)
+
+### Menu Page
+![Menu](screenshots/menu.png)
+
+### Cart Page
+![Cart](screenshots/cart.png)
